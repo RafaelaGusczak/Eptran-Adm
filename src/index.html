@@ -6,32 +6,37 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <header class="shadow-xl fixed w-full h-20 p-5 flex justify-between items-center z-50 bg-[#023859]" >
-      <div class="flex items-center">
-          <a href="" class="text-3xl text-white select-none ml-15">
-              <img class="w-28" src="img/Logo Eptran.png" alt="Logo">
+  <header class="shadow-xl fixed w-full h-28 items-center z-50 bg-darkBlue-500 grid grid-cols-4">
+      <div class="col-span-1 flex px-10">
+          <a>
+            <img class="w-28" src="img/Logo Eptran.png" alt="Logo">
           </a>
       </div>
-      <nav class="flex justify-start">
-          <a href="ensino.html" class="relative text-lg text-white no-underline font-medium ml-10">Atividade</a>
-          <a href="sobrenos.html" class="relative text-lg text-white no-underline font-medium ml-10">Sobre Nós</a>
-          <a href="faleConosco.html" class="relative text-lg text-white no-underline font-medium ml-10">Fale Conosco</a>
+      <nav class="col-span-2 flex justify-center">
+          <a href="ensino.html" class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Atividade</a>
+          <a href="#" class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Consquistas</a>
+          <a href="sobrenos.html" class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Sobre Nós</a>
+          <a href="faleConosco.html" class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Fale Conosco</a>
+          <a href="#" class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Administrador</a>
       </nav>
+      <div class="flex justify-end items-start col-span-1 px-5 ">
+        <img class="w-12 mr-4" src="img/circle-user-round.png" alt="Foto Perfil">
+      </div>
   </header>
-  <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-72 bg-[#023859]">
-    <div class="px-4 mt-24 flex text-white font-bold text-2xl">
+  <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-60 bg-darkBlue-600">
+    <div class="px-4 mt-32 flex justify-center text-white font-bold text-3xl">
       <h1>
         Admin
       </h1>
     </div>
-    <hr class="w-auto my-10 bg-white h-1 border-0 rounded-sm">
-    <div>
-      <p class="text-white px-4 py-2 hover:underline "><a href="#">Conteudo</a></p>
-      <p class="text-white px-4 py-2 hover:underline "><a href="#">Vídeos</a></p>
-      <p class="text-white px-4 py-2 hover:underline "><a href="#">Índices</a></p>
-      <p class="text-white px-4 py-2 hover:underline "><a href="#">Usuário</a></p>
-      <p class="text-white px-4 py-2 hover:underline "><a href="#">Ticket</a></p> 
+    <hr class="w-auto my-4 bg-white  rounded-sm">
+    <div class="grid grid-cols-7 align-middle items-center">
+      <img src="img/book-text.png" class="w-5"> <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Conteudo</a></p>
+      <img src="img/video.png" class="w-5"> <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Vídeos</a></p>
+      <img src="img/message-square-warning.png" class="w-5"> <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Índices</a></p>
+      <img src="img/user-round.png" class="w-5"> <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Usuário</a></p>
+      <img src="img/tickets.png" class="w-5"> <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Ticket</a></p>
     </div>  
-  </aside>
+  </aside> 
 </body>
 </html>
