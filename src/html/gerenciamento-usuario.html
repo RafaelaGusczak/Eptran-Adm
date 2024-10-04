@@ -1,0 +1,318 @@
+<!doctype html>
+<html class="min-h-full h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gerenciamento Usuario</title>
+</head>
+
+<body class="bg-white min-h-full flex flex-col">
+
+    <!-- Header -->
+
+    <header class="shadow-xl fixed w-full h-28 items-center z-50 bg-darkBlue-500 grid grid-cols-4">
+        <div class="col-span-1 flex px-10">
+            <a>
+                <img class="w-28" src="../img/Logo Eptran.png" alt="Logo">
+            </a>
+        </div>
+        <nav class="col-span-2 flex justify-center">
+            <a href="ensino.html"
+                class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Atividade</a>
+            <a href="#"
+                class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Consquistas</a>
+            <a href="sobrenos.html"
+                class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Sobre Nós</a>
+            <a href="faleConosco.html"
+                class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Fale Conosco</a>
+            <a href="#"
+                class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Administrador</a>
+        </nav>
+        <div class="flex justify-end items-start col-span-1 px-5 ">
+            <img class="w-12 mr-4" src="../img/circle-user-round.png" alt="Foto Perfil">
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-60 bg-darkBlue-600">
+        <div class="px-4 mt-32 flex justify-center text-white font-bold text-3xl">
+            <h1>
+                Admin
+            </h1>
+        </div>
+        <hr class="w-auto my-4 bg-white  rounded-sm">
+        <div class="grid grid-cols-7 align-middle items-center">
+            <img src="../img/book-text.png" class="w-5">
+            <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Conteudo</a></p>
+            <img src="../img/video.png" class="w-5">
+            <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Vídeos</a></p>
+            <img src="../img/message-square-warning.png" class="w-5">
+            <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Índices</a></p>
+            <img src="../img/user-round.png" class="w-5">
+            <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Usuário</a></p>
+            <img src="../img/tickets.png" class="w-5">
+            <p class="text-white px-2 py-2 hover:underline col-span-6 text-xl"><a href="#">Ticket</a></p>
+        </div>
+    </aside>
+
+    <!-- Main -->
+
+    <main>
+
+        <div class="ml-72 pt-24 p-8">
+
+            <div class="flex space-x-8 mt-20">
+
+                <div class="relative">
+                    <div class="absolute flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 mt-2.5 text-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="text" id="procurar"
+                        class="block items-center p-2 ps-10 w-80 text-sm bg-gray-100 shadow-md rounded-lg mb-6"
+                        placeholder="Procurar">
+
+                </div>
+
+                <div>
+                    <select class="text-blue block font-semibold  p-2 text-sm bg-gray-100 shadow-md rounded-lg mb-6"
+                        name="selecionar">
+                        <option class="text-blue" value="selecionar" disabled selected>Selecionar</option>
+                        <option value="user-ativo">Usuários Ativos</option>
+                        <option value="user-inativo">Usuários Inativos</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+
+                <table class="w-full text-sm text-left bg-gray-100">
+                    <thead class="text-blue">
+                        <tr class="border-b border-black">
+                            <th scope="col" class="px-6 py-3">
+                                ID ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Usuário ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                E-mail ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Gênero ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Nascimento ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Cidade/Estado ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Escola ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Escolaridade ▾
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-black hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                23222
+                            </td>
+                            <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap">
+                                <img class="w-10 h-10 rounded-full" src="../img/salsicha.png" alt="salsicha">
+                                <div class="ps-3">
+                                    <div class="text-base font-semibold">José Silva</div>
+                                </div>
+                            </th>
+                            <td class="px-6 py-4">
+                                jose.silva@gmail.com
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    ♂
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                11/12/2024
+                            </td>
+                            <td class="px-6 py-4">
+                                JOINVILLE/SC
+                            </td>
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
+                        </tr>
+                        <tr class="border-b border-black hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                53243
+                            </td>
+                            <th scope="row"
+                                class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                <img class="w-10 h-10 rounded-full" src="../img/salsicha.png" alt="salsicha">
+                                <div class="ps-3">
+                                    <div class="text-base font-semibold">José Silva</div>
+                                </div>
+                            </th>
+                            <td class="px-6 py-4">
+                                jose.silva@gmail.com
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    ♂
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                11/12/2024
+                            </td>
+                            <td class="px-6 py-4">
+                                JOINVILLE/SC
+                            </td>
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
+                        </tr>
+                        <tr class="border-b border-black hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                75654
+                            </td>
+                            <th scope="row"
+                                class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                <img class="w-10 h-10 rounded-full" src="../img/salsicha.png" alt="salsicha">
+                                <div class="ps-3">
+                                    <div class="text-base font-semibold">José Silva</div>
+                                </div>
+                            </th>
+                            <td class="px-6 py-4">
+                                jose.silva@gmail.com
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    ♂
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                11/12/2024
+                            </td>
+                            <td class="px-6 py-4">
+                                JOINVILLE/SC
+                            </td>
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
+                        </tr>
+                        <tr class="border-b border-black hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                23423
+                            </td>
+                            <th scope="row"
+                                class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                <img class="w-10 h-10 rounded-full" src="../img/salsicha.png" alt="salsicha">
+                                <div class="ps-3">
+                                    <div class="text-base font-semibold">José Silva</div>
+                                </div>
+                            </th>
+                            <td class="px-6 py-4">
+                                jose.silva@gmail.com
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    ♂
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                11/12/2024
+                            </td>
+                            <td class="px-6 py-4">
+                                JOINVILLE/SC
+                            </td>
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
+                        </tr>
+                        <tr class="dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <td class="px-6 py-4">
+                                98675
+                            </td>
+                            <th scope="row"
+                                class="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                <img class="w-10 h-10 rounded-full" src="../img/salsicha.png" alt="salsicha">
+                                <div class="ps-3">
+                                    <div class="text-base font-semibold">José Silva</div>
+                                </div>
+                            </th>
+                            <td class="px-6 py-4">
+                                jose.silva@gmail.com
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    ♂
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                11/12/2024
+                            </td>
+                            <td class="px-6 py-4">
+                                JOINVILLE/SC
+                            </td>
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- <footer class="mt-auto h-full px-6 bg-darkBlue-500 text-white z-50 w-full grid grid-cols-5">
+        <ul class="col-span-1 mt-6 px-6">
+            <h1 class="text-lg">Leia Mais</h1>
+            <br>
+            <li>Abrir ticket</li>
+            <li>Material</li>
+            <li>Videos</li>
+            <li><a href="">Jogos</a></li>
+        </ul>
+        <ul class="col-span-1 mt-6 px-6">
+            <h1 class="text-lg">Sobre Nós</h1>
+        </ul>
+        <ul class="col-span-1 mt-6 px-6">
+            <h1 class="text-lg">Contato</h1>
+        </ul>
+        <ul class="col-span-1 mt-6 px-6">
+            <h1 class="text-lg">Social</h1>
+        </ul>
+        <ul class="col-span-1 mt-6 px-6">
+            <img src="img/Logo Eptran.png" alt="Logo Eptran" class="w-28">
+        </ul>
+      
+    </footer> -->
+</body>
+
+</html>

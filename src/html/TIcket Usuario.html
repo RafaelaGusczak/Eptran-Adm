@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <link href="../output.css" rel="stylesheet">
+  <title>Ticket Usuario</title>
 </head>
-<body>
+<body class="bg-white">
 
 <!-- Navbar -->
 
   <nav class="shadow-xl fixed w-full h-28 items-center z-50 bg-darkBlue-500 grid grid-cols-4">
       <div class="col-span-1 flex px-10">
           <a>
-            <img class="w-28" src="img/Logo Eptran.png" alt="Logo">
+            <img class="w-28" src="../img/Logo Eptran.png" alt="Logo">
           </a>
       </div>
       <nav class="col-span-2 flex justify-center">
@@ -23,9 +24,9 @@
           <a href="#" class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Administrador</a>
       </nav>
       <div class="flex justify-end items-start col-span-1 px-5 ">
-        <img class="w-12 mr-4" src="img/circle-user-round.png" alt="Foto Perfil">
+        <img class="w-12 mr-4" src="../img/circle-user-round.png" alt="Foto Perfil">
       </div>
-  </nav>
+    </nav>
 
   <!-- Sidebar -->
 
@@ -37,12 +38,28 @@
     </div>
     <hr class="w-auto my-4 bg-white  rounded-sm">
     <div class="grid grid-cols-7 align-middle items-center">
-      <img src="img/book-text.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Conteudo</a></p>
-      <img src="img/video.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Vídeos</a></p>
-      <img src="img/message-square-warning.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Índices</a></p>
-      <img src="img/user-round.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Usuário</a></p>
-      <img src="img/tickets.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Ticket</a></p>
+      <img src="../img/book-text.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Conteudo</a></p>
+      <img src="../img/video.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Vídeos</a></p>
+      <img src="../img/message-square-warning.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Índices</a></p>
+      <img src="../img/user-round.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Usuário</a></p>
+      <img src="../img/tickets.png" class="w-5"> <p class="text-white p-2 hover:underline col-span-6 text-xl"><a href="#">Ticket</a></p>
     </div>  
-  </aside> 
+  </aside>
+
+  <!-- Main -->
+
+  <main class="w-24 h-full ml-80 pt-28">
+    <h1 class="flex justify-center ">Ticket de Usuário</h1>
+
+    <div>
+      <h2>Detalhes</h2>
+      <br>
+      <h3>Assunto</h3>
+      <input type="text">
+
+    </div>
+    
+  </main>
+
 </body>
 </html>
