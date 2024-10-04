@@ -1,16 +1,12 @@
 <!doctype html>
 <html>
 
-
-
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="gerenciamento.js"></script>
 </head>
 
 
@@ -49,9 +45,6 @@
     <!-- Sidebar -->
 
 
-    <h1>Oi</h1>
-
-
     <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-60 bg-darkBlue-600">
         <div class="px-4 mt-32 flex justify-center text-white font-bold text-3xl">
             <h1>
@@ -85,7 +78,7 @@
 
 
 
-            <div class="flex space-x-8 mt-20">
+            <div class="w-full flex space-x-8 mt-20 justify-between">
 
 
 
@@ -111,17 +104,14 @@
 
 
                 <div>
-                    <select class="text-blue block font-semibold  p-2 text-sm bg-gray-100 shadow-md rounded-lg mb-6"
+                    <select
+                        class="text-blue block font-semibold p-2 text-sm bg-gray-100 shadow-md rounded-lg mb-6 cursor-pointer"
                         name="selecionar">
-                        <option class="text-blue" value="selecionar" disabled selected>Selecionar</option>
+                        <option class="text-blue" value="selecionar" selected>Todos os Usuários</option>
                         <option value="user-ativo">Usuários Ativos</option>
                         <option value="user-inativo">Usuários Inativos</option>
                     </select>
                 </div>
-
-
-
-
             </div>
 
 
@@ -131,40 +121,39 @@
 
 
                 <table class="w-full text-sm text-left bg-gray-100">
-                    <thead class="text-blue">
+                    <thead class="text-blue cursor-pointer">
                         <tr class="border-b border-black">
                             <th scope="col" class="px-6 py-3">
-                                ID ▾
+                                ID 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Usuário ▾
+                                Usuário 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                E-mail ▾
+                                E-mail 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Gênero ▾
+                                Gênero 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Nascimento ▾
+                                Nascimento 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Cidade/Estado ▾
+                                Cidade/Estado 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Escola ▾
+                                Escola 
                             </th>
-                            <th scope="col" class="px-6 py-3">
-                                Escolaridade ▾
+                            <th scope="col">
+                                Escolaridade 
                             </th>
-
-
-
-
+                            <th scope="col">
+                               
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 23222
                             </td>
@@ -179,7 +168,7 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z" fill="#0F0F0F"></path> </g></svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -194,8 +183,23 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#023859" onclick="abrirMenu()">
+                                    <g>
+                                        <circle cx="321.4" cy="896.2" r="171.2"></circle>
+                                        <circle cx="898.3" cy="896.2" r="171.2"></circle>
+                                        <circle cx="1469" cy="896.2" r="171.2"></circle>
+                                    </g>
+                                </svg>
+                            </td>
+                            
+                            <div class="w-40 h-30 border text-center shadow-md rounded-md " id="menuEditar" style="display:none;">
+                                <button class="text-blue font-bold hover:bg-gray-200">Editar Usuário</button>
+                                <button class="text-blue font-bold hover:bg-gray-200">Excluir Usuário</button>
+                            </div>
+                            
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 53243
                             </td>
@@ -211,7 +215,7 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z" fill="#0F0F0F"></path> </g></svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -226,8 +230,11 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#023859"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="321.4" cy="896.2" r="171.2"></circle> <circle cx="898.3" cy="896.2" r="171.2"></circle> <circle cx="1469" cy="896.2" r="171.2"></circle> </g></svg>
+                            </td>
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 75654
                             </td>
@@ -243,7 +250,7 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z" fill="#0F0F0F"></path> </g></svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -258,8 +265,11 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#023859"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="321.4" cy="896.2" r="171.2"></circle> <circle cx="898.3" cy="896.2" r="171.2"></circle> <circle cx="1469" cy="896.2" r="171.2"></circle> </g></svg>
+                            </td>
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 23423
                             </td>
@@ -275,7 +285,7 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z" fill="#0F0F0F"></path> </g></svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -290,8 +300,11 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#023859"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="321.4" cy="896.2" r="171.2"></circle> <circle cx="898.3" cy="896.2" r="171.2"></circle> <circle cx="1469" cy="896.2" r="171.2"></circle> </g></svg>
+                            </td>
                         </tr>
-                        <tr class="dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <tr class="dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600 font-semibold">
                             <td class="px-6 py-4">
                                 98675
                             </td>
@@ -307,7 +320,7 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z" fill="#0F0F0F"></path> </g></svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -322,6 +335,9 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#023859"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="321.4" cy="896.2" r="171.2"></circle> <circle cx="898.3" cy="896.2" r="171.2"></circle> <circle cx="1469" cy="896.2" r="171.2"></circle> </g></svg>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -335,4 +351,3 @@
 
 
 </html>
-
