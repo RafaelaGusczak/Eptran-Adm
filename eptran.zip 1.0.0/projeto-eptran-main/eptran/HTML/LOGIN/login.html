@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <title>Document</title>
+
+</head>
+
+
+<body class="body2">
+
+    <header>
+        <div class="esquerda">
+            <a href="../paginaInicial.html">
+                <img src="../../img/logo-eptran.png" alt="Logo">
+            </a>
+        </div>
+        <nav class="navigation">
+            <a href="../CONTEUDO/ensino.html" class="diferente">Atividade</a>
+            <a href="../CONTEUDO/sobrenos.html" class="diferente">Sobre Nós</a>
+            <a href="./faleConosco.html" class="diferente">Fale Conosco</a>
+            <a href="./login.html"><button class="btnLogin-popup">Login/Cadastro</button></a>
+        </nav>
+    </header>
+    
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" name="senha" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Lembrar</label>
+                    <a href="">Esqueceu senha?</a>
+                </div>
+                <button type="submit" class="bnt5" name="login">Login</button>
+                <div class="login-register">
+                    <p class="p2">Não tem uma conta? <a href="cadastro.html" class="register-link">Registrar</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script><!--icone de estilo -->
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- icone de cadeado de senha -->
+
+    <footer>
+        <img src="../../img/Prefeitura.png" alt="0">
+
+        <img class="img" src="../../img/logof.png" alt="">
+    </footer>
+</body>
+
+</html>
