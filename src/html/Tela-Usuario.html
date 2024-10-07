@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="gerenciamento.js"></script>
 </head>
 
 <body class="bg-white">
@@ -39,7 +40,11 @@
     <div class="flex h-full w-10 bg-darkBlue-500 ">
 
 
-        <!-- Sidebar -->
+    <!-- Sidebar -->
+
+
+    <h1>Oi</h1>
+
 
         <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-60 bg-darkBlue-600">
             <div class="px-4 mt-32 flex justify-center text-white font-bold text-3xl">
@@ -70,73 +75,39 @@
 
             <div class="ml-80 pt-32 p-8">
 
-                <div class="flex space-x-8 mt-10 h-40">
-                    <!-- Primeiro Card -->
-                    <div
-                        class="relative flex items-center justify-center p-4 w-64 h-32 bg-darkBlue-500 text-white rounded-[30px] shadow-xl">
-                        <div class="absolute top-4 left-4">
-                            <img class=" rounded-[10px] w-10 h-10 mt-7" src=".//img/check.png" alt="">
-                        </div>
-                        <div class="ml-10 text-center">
-                            <h1 class="text-3xl font-bold">26,200</h1>
-                            <p class="text-sm">Tickets Resolvidos</p>
-                        </div>
-                    </div>
 
 
-                    <!-- Segundo Card -->
-                    <div
-                        class="relative flex items-center justify-center p-4 w-64 h-32 bg-darkBlue-500 text-white rounded-[30px] shadow-xl">
-                        <div class="absolute top-4 left-4">
-                            <img class=" rounded-[10px] w-12 h-12 mt-6 " src=".//img/clock.png" alt="">
-                        </div>
-                        <div class="ml-10">
-                            <h1 class="text-3xl font-bold">15,300</h1>
-                            <p class="text-sm">Chamados Atendidos</p>
-                        </div>
-                    </div>
+
+            <div class="flex space-x-8 mt-20">
 
 
-                    <!-- Terceiro Card -->
-                    <div
-                        class="relative flex items-center justify-center p-4 w-64 h-32 bg-darkBlue-500 text-white rounded-[30px] shadow-xl">
-                        <div class="absolute top-4 left-4">
-                            <img class=" rounded-[10px] w-14 h-14 mt-5 " src=".//img/clipboard.png" alt="">
-                        </div>
-                        <div class="ml-10 text-center">
-                            <h1 class="text-3xl font-bold">8,150</h1>
-                            <p class="text-sm">Clientes Satisfeitos</p>
-                        </div>
-                    </div>
 
 
-                    <!-- Quarto Card -->
-                    <div
-                        class="relative flex items-center justify-center p-4 w-64 h-32 bg-darkBlue-500 text-white rounded-[30px] shadow-xl">
-                        <div class="absolute top-4 left-4">
-                            <img class=" rounded-[10px] w-12 h-12 mt-6 " src=".//img/error.png" alt="">
-                        </div>
-                        <div class="ml-10 text-center">
-                            <h1 class="text-3xl font-bold">12,500</h1>
-                            <p class="text-sm">Projetos Concluídos</p>
-                        </div>
-                    </div>
-
-
-                    <!-- Quinto Card -->
-                    <div
-                        class="relative flex items-center justify-center p-4 w-64 h-32 bg-darkBlue-500 text-white rounded-[30px] shadow-xl">
-                        <div class="absolute top-4 left-4">
-                            <img class=" rounded-[10px] w-12 h-12 mt-6 " src=".//img/trash.png" alt="">
-                        </div>
-                        <div class="ml-10 text-center">
-                            <h1 class="text-3xl font-bold">9,800</h1>
-                            <p class="text-sm">Tickets Pendentes</p>
-                        </div>
+                <div class="relative">
+                    <div class="absolute flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 mt-2.5 text-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
                     </div>
 
 
                 </div>
+
+
+
+
+                <div>
+                    <select class="text-blue block font-semibold  p-2 text-sm bg-gray-100 shadow-md rounded-lg mb-6"
+                        name="selecionar">
+                        <option class="text-blue" value="selecionar" disabled selected>Selecionar</option>
+                        <option value="user-ativo">Usuários Ativos</option>
+                        <option value="user-inativo">Usuários Inativos</option>
+                    </select>
+                </div>
+
+
 
 
             </div>
@@ -145,33 +116,40 @@
             <div class="ml-80  p-8">
 
                 <table class="w-full text-sm text-left bg-gray-100">
-                    <thead class="text-blue">
+                    <thead class="text-blue cursor-pointer">
                         <tr class="border-b border-black">
                             <th scope="col" class="px-6 py-3">
-                                ID ▾
+                                ID 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Usuário ▾
+                                Usuário 
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Assunto ▾
+                                E-mail ▾
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Prioridade ▾
+                                Gênero ▾
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Status ▾
+                                Nascimento ▾
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Data da Criação ▾
+                                Cidade/Estado ▾
                             </th>
+                            <th scope="col" class="px-6 py-3">
+                                Escola ▾
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Escolaridade ▾
+                            </th>
+
 
 
 
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 23222
                             </td>
@@ -185,7 +163,7 @@
                                 jose.silva@gmail.com
                             </td>
                             <td class="px-6 py-4">
-                                <div class=" bg-red-300 flex items-center">
+                                <div class="flex items-center">
                                     ♂
                                 </div>
                             </td>
@@ -195,11 +173,14 @@
                             <td class="px-6 py-4">
                                 JOINVILLE/SC
                             </td>
-
-
-
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 53243
                             </td>
@@ -214,7 +195,7 @@
                                 jose.silva@gmail.com
                             </td>
                             <td class="px-6 py-4">
-                                <div class=" bg-red-300 flex items-center">
+                                <div class="flex items-center">
                                     ♂
                                 </div>
                             </td>
@@ -224,9 +205,14 @@
                             <td class="px-6 py-4">
                                 JOINVILLE/SC
                             </td>
-
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 75654
                             </td>
@@ -241,7 +227,7 @@
                                 jose.silva@gmail.com
                             </td>
                             <td class="px-6 py-4">
-                                <div class=" bg-red-300 flex items-center">
+                                <div class="flex items-center">
                                     ♂
                                 </div>
                             </td>
@@ -251,8 +237,14 @@
                             <td class="px-6 py-4">
                                 JOINVILLE/SC
                             </td>
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 23423
                             </td>
@@ -267,7 +259,7 @@
                                 jose.silva@gmail.com
                             </td>
                             <td class="px-6 py-4">
-                                <div class=" bg-red-300 flex items-center">
+                                <div class="flex items-center">
                                     ♂
                                 </div>
                             </td>
@@ -277,9 +269,14 @@
                             <td class="px-6 py-4">
                                 JOINVILLE/SC
                             </td>
-
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
+                            </td>
                         </tr>
-                        <tr class="dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <tr class="dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td class="px-6 py-4">
                                 98675
                             </td>
@@ -294,7 +291,7 @@
                                 jose.silva@gmail.com
                             </td>
                             <td class="px-6 py-4">
-                                <div class="bg-red-300 flex items-center">
+                                <div class="flex items-center">
                                     ♂
                                 </div>
                             </td>
@@ -303,6 +300,12 @@
                             </td>
                             <td class="px-6 py-4">
                                 JOINVILLE/SC
+                            </td>
+                            <td class="px-6 py-4">
+                                E.E.B GAG
+                            </td>
+                            <td class="px-6 py-4">
+                                3º EM
                             </td>
                         </tr>
                     </tbody>
