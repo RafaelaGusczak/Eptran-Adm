@@ -1,17 +1,18 @@
 <!doctype html>
-<html class="min-h-full h-full">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Gerenciamento Usuario</title>
+    <script src="gerenciamento.js"></script>
 </head>
 
-<body class="bg-white min-h-full flex flex-col">
+<body class="bg-white">
+
 
     <!-- Header -->
-
     <header class="shadow-xl fixed w-full h-28 items-center z-50 bg-darkBlue-500 grid grid-cols-4">
         <div class="col-span-1 flex px-10">
             <a>
@@ -19,13 +20,13 @@
             </a>
         </div>
         <nav class="col-span-2 flex justify-center">
-            <a href="ensino.html"
+            <a href="../img/ensino.html"
                 class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Atividade</a>
             <a href="#"
                 class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Consquistas</a>
-            <a href="sobrenos.html"
+            <a href="../img/sobrenos.html"
                 class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Sobre Nós</a>
-            <a href="faleConosco.html"
+            <a href="../img/faleConosco.html"
                 class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Fale Conosco</a>
             <a href="#"
                 class="hover:underline relative text-lg text-white no-underline font-medium ml-10">Administrador</a>
@@ -36,7 +37,6 @@
     </header>
 
     <!-- Sidebar -->
-
     <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-60 bg-darkBlue-600">
         <div class="px-4 mt-32 flex justify-center text-white font-bold text-3xl">
             <h1>
@@ -59,17 +59,15 @@
     </aside>
 
     <!-- Main -->
-
     <main>
-
         <div class="ml-72 pt-24 p-8">
 
-            <div class="flex space-x-8 mt-20">
+            <div class="w-full flex space-x-8 mt-20 justify-between">
 
                 <div class="relative">
                     <div class="absolute flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 mt-2.5 text-blue" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 mt-2.5 text-darkBlue-500" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
@@ -77,54 +75,52 @@
                     <input type="text" id="procurar"
                         class="block items-center p-2 ps-10 w-80 text-sm bg-gray-100 shadow-md rounded-lg mb-6"
                         placeholder="Procurar">
-
                 </div>
-
                 <div>
-                    <select class="text-blue block font-semibold  p-2 text-sm bg-gray-100 shadow-md rounded-lg mb-6"
+                    <select
+                        class="text-darkBlue-500 block font-semibold p-2 text-sm bg-gray-100 shadow-md rounded-lg mb-6 cursor-pointer"
                         name="selecionar">
-                        <option class="text-blue" value="selecionar" disabled selected>Selecionar</option>
+                        <option class="text-darkBlue-500" value="selecionar" selected>Todos os Usuários</option>
                         <option value="user-ativo">Usuários Ativos</option>
                         <option value="user-inativo">Usuários Inativos</option>
                     </select>
                 </div>
-
             </div>
 
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-
                 <table class="w-full text-sm text-left bg-gray-100">
-                    <thead class="text-blue">
+                    <thead class="text-darkBlue-500 cursor-pointer">
                         <tr class="border-b border-black">
                             <th scope="col" class="px-6 py-3">
-                                ID ▾
+                                ID
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Usuário ▾
+                                Usuário
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                E-mail ▾
+                                E-mail
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Gênero ▾
+                                Gênero
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Nascimento ▾
+                                Nascimento
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Cidade/Estado ▾
+                                Cidade/Estado
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Escola ▾
+                                Escola
                             </th>
-                            <th scope="col" class="px-6 py-3">
-                                Escolaridade ▾
+                            <th scope="col">
+                                Escolaridade
                             </th>
-
+                            <th scope="col">
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 23222
                             </td>
@@ -139,7 +135,17 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z"
+                                                fill="#0F0F0F"></path>
+                                        </g>
+                                    </svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -154,8 +160,68 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td class="relative">
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1"
+                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792"
+                                    xml:space="preserve" stroke="#023859" onclick="abrirMenu()">
+                                    <g>
+                                        <circle cx="321.4" cy="896.2" r="171.2"></circle>
+                                        <circle cx="898.3" cy="896.2" r="171.2"></circle>
+                                        <circle cx="1469" cy="896.2" r="171.2"></circle>
+                                    </g>
+                                </svg>
+
+                                <div id="menuEditar"
+                                    class="absolute right-12 mt-2 w-48 rounded-md shadow-lg bg-white border border-gray-200"
+                                    style="display: none;">
+                                    <ul class="py-1 text-sm text-gray-700">
+                                        <li>
+                                            <button
+                                                class="flex items-center px-4 py-2 text-darkBlue-500 font-bold hover:bg-gray-100 w-full">
+                                                <svg class="mr-2" fill="#023859" width="16px" height="16px"
+                                                    viewBox="0 0 32.00 32.00" version="1.1"
+                                                    xmlns="http://www.w3.org/2000/svg" stroke="#023859"
+                                                    stroke-width="0.00032">
+                                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                        stroke-linejoin="round"></g>
+                                                    <g id="SVGRepo_iconCarrier">
+                                                        <title>edit</title>
+                                                        <path
+                                                            d="M10.681 18.207l-2.209 5.67 5.572-2.307-3.363-3.363zM26.855 6.097l-0.707-0.707c-0.78-0.781-2.047-0.781-2.828 0l-1.414 1.414 3.535 3.536 1.414-1.414c0.782-0.781 0.782-2.048 0-2.829zM10.793 17.918l0.506-0.506 3.535 3.535 9.9-9.9-3.535-3.535 0.707-0.708-11.113 11.114zM23.004 26.004l-17.026 0.006 0.003-17.026 11.921-0.004 1.868-1.98h-14.805c-0.552 0-1 0.447-1 1v19c0 0.553 0.448 1 1 1h19c0.553 0 1-0.447 1-1v-14.058l-2.015 1.977 0.054 11.085z">
+                                                        </path>
+                                                    </g>
+                                                </svg>
+                                                Editar Usuário
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                class="flex items-center px-4 py-2 text-darkBlue-500 font-bold hover:bg-gray-100 hover:rounded-sm w-full">
+                                                <svg class="mr-2" width="13px" height="13px" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                        stroke-linejoin="round"></g>
+                                                    <g id="SVGRepo_iconCarrier">
+                                                        <path
+                                                            d="M8 1.5V2.5H3C2.44772 2.5 2 2.94772 2 3.5V4.5C2 5.05228 2.44772 5.5 3 5.5H21C21.5523 5.5 22 5.05228 22 4.5V3.5C22 2.94772 21.5523 2.5 21 2.5H16V1.5C16 0.947715 15.5523 0.5 15 0.5H9C8.44772 0.5 8 0.947715 8 1.5Z"
+                                                            fill="#023859"></path>
+                                                        <path
+                                                            d="M3.9231 7.5H20.0767L19.1344 20.2216C19.0183 21.7882 17.7135 23 16.1426 23H7.85724C6.28636 23 4.98148 21.7882 4.86544 20.2216L3.9231 7.5Z"
+                                                            fill="#023859"></path>
+                                                    </g>
+                                                </svg>
+                                                Excluir Usuário
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 53243
                             </td>
@@ -171,7 +237,17 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z"
+                                                fill="#0F0F0F"></path>
+                                        </g>
+                                    </svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -186,8 +262,22 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1"
+                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792"
+                                    xml:space="preserve" stroke="#023859">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <circle cx="321.4" cy="896.2" r="171.2"></circle>
+                                        <circle cx="898.3" cy="896.2" r="171.2"></circle>
+                                        <circle cx="1469" cy="896.2" r="171.2"></circle>
+                                    </g>
+                                </svg>
+                            </td>
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 75654
                             </td>
@@ -203,7 +293,17 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z"
+                                                fill="#0F0F0F"></path>
+                                        </g>
+                                    </svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -218,8 +318,22 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1"
+                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792"
+                                    xml:space="preserve" stroke="#023859">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <circle cx="321.4" cy="896.2" r="171.2"></circle>
+                                        <circle cx="898.3" cy="896.2" r="171.2"></circle>
+                                        <circle cx="1469" cy="896.2" r="171.2"></circle>
+                                    </g>
+                                </svg>
+                            </td>
                         </tr>
-                        <tr class="border-b border-black hover:bg-gray-50">
+                        <tr class="border-b border-black hover:bg-gray-50 font-semibold">
                             <td class="px-6 py-4">
                                 23423
                             </td>
@@ -235,7 +349,17 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z"
+                                                fill="#0F0F0F"></path>
+                                        </g>
+                                    </svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -250,8 +374,22 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1"
+                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792"
+                                    xml:space="preserve" stroke="#023859">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <circle cx="321.4" cy="896.2" r="171.2"></circle>
+                                        <circle cx="898.3" cy="896.2" r="171.2"></circle>
+                                        <circle cx="1469" cy="896.2" r="171.2"></circle>
+                                    </g>
+                                </svg>
+                            </td>
                         </tr>
-                        <tr class="dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <tr class="7ark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600 font-semibold">
                             <td class="px-6 py-4">
                                 98675
                             </td>
@@ -267,7 +405,17 @@
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex items-center">
-                                    ♂
+                                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15 3C15 2.44772 15.4477 2 16 2H20C21.1046 2 22 2.89543 22 4V8C22 8.55229 21.5523 9 21 9C20.4477 9 20 8.55228 20 8V5.41288L15.4671 9.94579C15.4171 9.99582 15.363 10.0394 15.3061 10.0767C16.3674 11.4342 17 13.1432 17 15C17 19.4183 13.4183 23 9 23C4.58172 23 1 19.4183 1 15C1 10.5817 4.58172 7 9 7C10.8559 7 12.5642 7.63197 13.9214 8.69246C13.9587 8.63539 14.0024 8.58128 14.0525 8.53118L18.5836 4H16C15.4477 4 15 3.55228 15 3ZM9 20.9963C5.68831 20.9963 3.00365 18.3117 3.00365 15C3.00365 11.6883 5.68831 9.00365 9 9.00365C12.3117 9.00365 14.9963 11.6883 14.9963 15C14.9963 18.3117 12.3117 20.9963 9 20.9963Z"
+                                                fill="#0F0F0F"></path>
+                                        </g>
+                                    </svg>
                                 </div>
                             </td>
                             <td class="px-6 py-4">
@@ -282,6 +430,20 @@
                             <td class="px-6 py-4">
                                 3º EM
                             </td>
+                            <td>
+                                <svg class="cursor-pointer" fill="#023859" height="20px" width="64px" version="1.1"
+                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792"
+                                    xml:space="preserve" stroke="#023859">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <circle cx="321.4" cy="896.2" r="171.2"></circle>
+                                        <circle cx="898.3" cy="896.2" r="171.2"></circle>
+                                        <circle cx="1469" cy="896.2" r="171.2"></circle>
+                                    </g>
+                                </svg>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -289,30 +451,6 @@
         </div>
         </div>
     </main>
-
-    <!-- <footer class="mt-auto h-full px-6 bg-darkBlue-500 text-white z-50 w-full grid grid-cols-5">
-        <ul class="col-span-1 mt-6 px-6">
-            <h1 class="text-lg">Leia Mais</h1>
-            <br>
-            <li>Abrir ticket</li>
-            <li>Material</li>
-            <li>Videos</li>
-            <li><a href="">Jogos</a></li>
-        </ul>
-        <ul class="col-span-1 mt-6 px-6">
-            <h1 class="text-lg">Sobre Nós</h1>
-        </ul>
-        <ul class="col-span-1 mt-6 px-6">
-            <h1 class="text-lg">Contato</h1>
-        </ul>
-        <ul class="col-span-1 mt-6 px-6">
-            <h1 class="text-lg">Social</h1>
-        </ul>
-        <ul class="col-span-1 mt-6 px-6">
-            <img src="img/Logo Eptran.png" alt="Logo Eptran" class="w-28">
-        </ul>
-      
-    </footer> -->
 </body>
 
 </html>
