@@ -10,7 +10,7 @@
 
 <!-- Navbar -->
 
-  <nav class="shadow-xl fixed w-full h-28 items-center z-50 bg-darkBlue-500 grid grid-cols-4">
+  <nav class="shadow-2xl fixed w-full h-28 items-center z-50 bg-darkBlue-500 grid grid-cols-4">
       <div class="col-span-1 flex px-10">
           <a>
             <img class="w-28" src="../img/Logo Eptran.png" alt="Logo">
@@ -30,7 +30,7 @@
 
   <!-- Sidebar -->
 
-  <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-60 bg-darkBlue-600">
+  <aside class="sidebar fixed top-0 bottom-0 overflow-y-auto p-2 w-60 bg-darkBlue-400">
     <div class="px-4 mt-32 flex justify-center text-white font-bold text-3xl">
       <h1>
         Admin
@@ -48,18 +48,38 @@
 
   <!-- Main -->
 
-  <main class="w-24 h-full ml-80 pt-28">
-    <h1 class="flex justify-center ">Ticket de Usuário</h1>
+  <main class="w-screen h-screen ml-56 pl-14 pt-36 mr-80">
+    <h1 class="flex text-darkBlue-500 font-bold justify-start text-3xl pl-10 pt-10">Ticket de USUARIO</h1>
+    <hr class="bg-darkBlue-500 w-auto my-4 border-1 border-darkBlue-500 rounded-full ml-10 mr-64">
 
-    <div>
-      <h2>Detalhes</h2>
-      <br>
-      <h3>Assunto</h3>
-      <input type="text">
 
-    </div>
-    
+    <div class="px-10 grid grid-cols-2 pt-10">
+    <!-- Primeiro Canto -->
+      <div class="col-span-1">
+        <h2 class="text-xl">DETALHES</h2>
+        <hr class="bg-darkBlue-400 w-auto my-4 border-1 border-darkBlue-500 rounded-full mr-64">
+        <br>
+          <h3 class="mt-2 font-semibold text-darkBlue-500 text-md">ASSUNTO</h3>
+            <div class="w-auto mr-64">
+              <input type="text" class="border-darkBlue-500 border-2 rounded-md h-12 w-full mt-3" placeholder="Estou com problema ao entrar no jogo">
+            </div>
+          <h3 class="mt-3">Descricao</h3>
+          <div class="">
+            <textarea class="border-2 border-black rounded-md mt-5" name="descricao" id="Descricao" rows="10" cols="82">Exemplo</textarea>
+          </div>
+          <h3>ANEXOS</h3>
+        </div>
+    <!-- Segundo Canto -->
+      <div class="col-span-1 w-80">
+        <h2 class="text-xl font-semibold">RESPOSTA</h2>
+        <hr class="bg-darkBlue-400 w-auto my-4 border-1 border-darkBlue-500 rounded-full mr-64">
+        <br>
+          <h3 class="font-semibold text-darkBlue-500 text-md">RESPOSTA AO TICKET</h3>
+          <div class="w-80">
+            <textarea class="border-2 border-black rounded-md mt-5" name="descricao" id="Descricao" rows="10" cols="80">Exemplo</textarea>
+          </div>
+      </div>
+    </div>    
   </main>
-
 </body>
 </html>
